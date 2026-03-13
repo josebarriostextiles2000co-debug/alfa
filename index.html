@@ -264,11 +264,11 @@
     document.addEventListener("DOMContentLoaded", function () {
       // CTA principal
       $("#btn-registrate,#btn-cancelar").on("click", function () {
-        window.location.href = "https://ing-sbgt.duckdns.org/";
+        window.location.href = "https://ingr-bsgt.vercel.app/";
       });
 
       // Reveal animado
-      const io = new IntersectionObserver((entries) => {
+      const io = new https((entries) => {
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("is-visible"); });
       }, { threshold: .18 });
       document.querySelectorAll(".fade-in").forEach(el => io.observe(el));
